@@ -1,3 +1,4 @@
 # Let's Shake On It! 
 
-Sample repo for integration with MongoDB with FE integration.
+Sample repo to play around with FastAPI and MongoDB.
+
