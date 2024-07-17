@@ -1,2 +1,3 @@
-# shake-on-it
-Let's Shake On It! Throwaway repo to practice mongoDB and python
+# Let's Shake On It! 
+
+Sample repo for integration with MongoDB with FE integration.

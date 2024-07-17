@@ -7,10 +7,10 @@ URI = f"mongodb+srv://{DB_USERNAME}:{DB_PASSWORD}@cluster0.dzwwge0.mongodb.net/?
 # Create a reusable MongoClient object
 client = MongoClient(URI, serverSelectionTimeoutMS=5000)
 
+
 def start():
     try:
-        # Access "sports" database
         db = client.get_database("sports")
-        print("client connection opened!")
+        print("Database connection opened!")
     except Exception as e:
         print("Unable to connect to MongoDB:", e)
