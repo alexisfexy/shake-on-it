@@ -11,7 +11,7 @@ from middlewares import not_found, error_handler
 
 load_dotenv()
 app = FastAPI(prefix="/api/v1")
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 
 # CORS middleware
 app.add_middleware(
@@ -35,5 +35,5 @@ async def root():
 if __name__ == "__main__":
     start()
     port = int(os.getenv("PORT", 5000))
-    uvicorn.run(app)  # , host="0.0.0.0", port=port)
-    print(f"Listening: http://localhost:{port}")
+    uvicorn.run(app)  # , host="0.0.0.0", port=port) # TODO: reinstate port variable
+    logging.debug(f"Listening: http://localhost:{port}")
