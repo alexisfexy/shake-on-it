@@ -1,12 +1,13 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
-from src.api.core_router import api
+from api.core_router import api
 import uvicorn
 import logging
 import os
 
 from db import start
+from middlewares import not_found, error_handler
 
 load_dotenv()
 app = FastAPI(prefix="/api/v1")
@@ -21,6 +22,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.add_exception_handler(404, not_found)  # type: ignore
+app.add_exception_handler(HTTPException, error_handler)  # type: ignore
 app.include_router(api, prefix="/api/v1")
 
 

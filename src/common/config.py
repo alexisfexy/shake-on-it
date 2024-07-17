@@ -1,5 +1,4 @@
 import os
-from tkinter import E
 from typing import Optional
 from dotenv import load_dotenv
 
