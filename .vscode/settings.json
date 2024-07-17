@@ -1,0 +1,13 @@
+{
+    "workbench.colorTheme": "Hyper Term Black",
+    "tabnine.experimentalAutoImports": true,
+    "files.autoSave": "afterDelay",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.addImport.exactMatchOnly": true,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "window.zoomLevel": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
+}
